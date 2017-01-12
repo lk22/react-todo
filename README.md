@@ -1,4 +1,4 @@
-# ReactWeather
+# React Boilerplate
 A simple react application to simply show the weather in a specific city powered with ReactJS
 
 This boilerplate comes with different frameworks that is perfect for your next ReactJS project
