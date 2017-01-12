@@ -9,9 +9,9 @@ This boilerplate comes with different frameworks that is perfect for your next R
 
 
 # Usage
-	before getting started on this boilerplate u need to install some packages that this boilerplate uses
-	to do that run : npm install to install packages see "packages.json" for packages that are required.
+before getting started on this boilerplate u need to install some packages that this boilerplate uses
+to do that run : 	npm install 	to install packages see "packages.json" for packages that are required.
 
-	this boilerplate have to get a server running on your local environment
-	u have to run following command: "node server.js"
+this boilerplate have to get a server running on your local environment
+u have to run following command: 	"node server.js"
 
