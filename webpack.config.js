@@ -1,5 +1,20 @@
+var webpack = require('webpack');
+
 module.exports = {
-	entry: './app/resources/assets/js/app.jsx',
+	 entry: [
+    'script!jquery/dist/jquery.min.js',
+    'script!foundation-sites/dist/foundation.min.js',
+    './app/resources/assets/js/app.jsx'
+  ],
+  externals: {
+    jquery: 'jQuery'
+  },
+  plugins: [
+    new webpack.ProvidePlugin({
+      '$': 'jquery',
+      'jQuery': 'jquery'
+    })
+  ],
 	output: {
 		path: __dirname,
 		filename: './public/bundle.js'
@@ -7,7 +22,8 @@ module.exports = {
 	resolve: {
 		root: __dirname,
 		alias: {
-			// aliases namespaces for required dependencies
+			Main: 'app/resources/assets/js/components/Main.jsx',
+			applicationStyles: 'app/resources/assets/css/styles.css'
 		},
 		extensions: ['', '.js', '.jsx']
 	},
@@ -22,5 +38,6 @@ module.exports = {
 				exclude: /(node_modules|bower_components)/
 			}
 		]
-	}
+	},
+	devtool: 'cheap-module-eval-source-map'
 }

@@ -1,8 +1,24 @@
 // dependencies
 var React = require('react');
 var ReactDOM = require('react-dom');
+var {Route, Router, IndexRoute, HashHistory} = require('react-router');
 
+// foundation CSS
+require('style!css!foundation-sites/dist/foundation.min.css');
+$(document).foundation();
+
+// application stylesheet
+require('style!css!applicationStyles');
+
+// page components
+var Main = require('Main');
+
+// render application
 ReactDOM.render(
-  	<h1>Hello React Boilerplate</h1>,
+  	<Router history={HashHistory}>
+   		<Route path="/" component={Main}>
+
+  		</Route>
+  	</Router>,
   	document.getElementById('app')
 );
