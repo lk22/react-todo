@@ -1,5 +1,5 @@
-# React Application Boilerplate
-A simple react Boilerplate to get you started on your new fresh react application
+# React Todo
+A simple react Todo application that simply can give you all your tasks complete them delete and quick search for them
 
 # Usage
 before getting started with this u need to install some packages that this boilerplate uses
