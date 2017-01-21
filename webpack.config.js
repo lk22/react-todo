@@ -23,12 +23,14 @@ module.exports = {
 		root: __dirname,
 		alias: {
 			// components
-			TodoApp: 'app/resources/assets/js/components/TodoApp.jsx'
+			TodoApp: 'app/resources/assets/js/components/TodoApp.jsx',
+			TodoList: 'app/resources/assets/js/components/TodoList.jsx',
+			Todo: 'app/resources/assets/js/components/Todo.jsx',
 
 			// styles
 			//applicationStyles: 'app/resources/assets/css/styles.css'
 		},
-		modeuleDirectories: ['node_modules', './app/resource/assets/js/components']
+		modeuleDirectories: ['node_modules', './app/resource/assets/js/components'],
 		extensions: ['', '.js', '.jsx']
 	},
 	module: {
