@@ -1,16 +1,15 @@
 var gulp = require('gulp');
 var sass = require('gulp-sass');
 
-gulp.task('default', ['sass', 'watch'], function() {
-	console.log('stylesheet compiled succefully');
-});
+gulp.task('default', ['sass']);
 
 gulp.task('sass', function() {
-	return gulp.src('./resources/assets/sass/app.scss/*.scss')
-    .pipe(sass().on('error', sass.logError))
+	return gulp.src('./app/resources/assets/sass/app.scss')
+    .pipe(sass())
     .pipe(gulp.dest('./public/css'));
 });
 
-gulp.task('watch', ['sass'], function() {
-	gulp.watch('./resources/assets/sass/**/*.scss');
+gulp.task('watch', function() {
+	gulp.watch('./resources/assets/sass/**/*.scss', ['sass']);
 });
+
