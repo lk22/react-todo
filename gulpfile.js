@@ -6,7 +6,7 @@ gulp.task('default', ['sass', 'watch'], function() {
 });
 
 gulp.task('sass', function() {
-	return gulp.src('./resources/assets/sass/**/*.scss')
+	return gulp.src('./resources/assets/sass/app.scss/*.scss')
     .pipe(sass().on('error', sass.logError))
     .pipe(gulp.dest('./public/css'));
 });
