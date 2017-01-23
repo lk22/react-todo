@@ -4,8 +4,9 @@ var TestUtils = require('react-addons-test-utils');
 var $ = require('jQuery');
 var expect = require('expect');
 
-var TodoList = require('TodoList');
 var Todo = require('Todo');
+var TodoList = require('TodoList');
+
 
 describe('TodoList, </TodoList>', () =>
 {
@@ -28,7 +29,7 @@ describe('TodoList, </TodoList>', () =>
 		];
 
 		var todoList = TestUtils.renderIntoDocument(<TodoList todos={todos} />);
-		var todoComponents = TestUtils.scryRenderedComponentsWithType(TodoList, Todo);
+		var todoComponents = TestUtils.scryRenderedComponentsWithType(todoList, Todo);
 
 		expect(todoComponents.length).toBe(todos.length);
 	});
