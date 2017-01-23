@@ -34,9 +34,9 @@ var TodoApp = React.createClass({
 		alert('new todo: ' + text);
 	},
 
-	handleSearch: function(checked, search) {
+	handleSearch: function(check, search) {
 		this.setState({
-			isChecked: checked,
+			isChecked: check,
 			searchText: search.toLowerCase()
 		});
 	},

@@ -12,4 +12,29 @@ describe('TodoSearch component', () =>
 	{
 		expect(TodoSearch).toExist();
 	});
+
+	it('should search with entered input text', () =>
+	{
+		var searchText = 'Dog';
+		var spy = expect.createSpy();
+		var todoSearch = TestUtils.renderIntoDocument(<TodoSearch onSearch={spy} />);
+
+		todoSearch.refs.search.value = searchText;
+
+		TestUtils.Simulate.change(todoSearch.refs.search);
+
+		expect(spy).toHaveBeenCalledWith(false, 'Dog');
+	});
+
+	it('should call onSeach with proper checked value', () =>
+	{
+		var spy = expect.createSpy();
+		var todoSearch = TestUtils.renderIntoDocument(<TodoSearch onSearch={spy} />);
+
+		todoSearch.refs.check.checked = true;
+
+		TestUtils.Simulate.change(todoSearch.refs.check);
+
+		expect(spy).toHaveBeenCalledWith(true, '');
+	});
 });
