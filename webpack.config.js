@@ -26,6 +26,7 @@ module.exports = {
 			TodoApp: 'app/resources/assets/js/components/TodoApp.jsx',
 			TodoList: 'app/resources/assets/js/components/TodoList.jsx',
 			Todo: 'app/resources/assets/js/components/Todo.jsx',
+			AddTodo: 'app/resources/assets/js/components/AddTodo.jsx',
 
 			// styles
 			//applicationStyles: 'app/resources/assets/css/styles.css'
