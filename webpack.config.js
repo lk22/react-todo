@@ -31,6 +31,9 @@ module.exports = {
 
 			// styles
 			//applicationStyles: 'app/resources/assets/css/styles.css'
+
+			// API
+			TodoAPI: 'app/api/TodoAPI.jsx'
 		},
 		modeuleDirectories: ['node_modules', './app/resource/assets/js/components'],
 		extensions: ['', '.js', '.jsx']
