@@ -1,0 +1,16 @@
+#todo-list{
+	padding:1.5rem;
+	color: #fff;
+
+	#todo {
+		margin-top: 1rem;
+		margin-bottom: 1rem;
+
+		.todo {
+			.completed {
+				color:#333;
+				text-decoration: line-through;
+			}
+		}
+	}
+}
