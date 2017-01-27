@@ -1,2 +1,37 @@
+#app {
+  height: 850px;
+  padding: 1.5rem;
+  color: #fff;
+}
+
+#todoSearch {
+  margin: 0 auto;
+  height: 50px;
+  width: 100%;
+}
+
+#todo-list {
+  padding: 1.5rem;
+  color: #fff;
+}
+
+#todo-list #todo {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+#todo-list #todo .todo .completed {
+  color: #333;
+  text-decoration: line-through;
+}
+
 body {
-  height: 20%; }
+  background: #9D50BB;
+  /* fallback for old browsers */
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-linear-gradient(right, #9D50BB, #6E48AA);
+  background: linear-gradient(to left, #9D50BB, #6E48AA);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+/*# sourceMappingURL=app.css.map */

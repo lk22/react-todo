@@ -60,7 +60,7 @@ var TodoApp = React.createClass({
 		var {todos, isChecked, searchText} = this.state;
 		var filteredTodos = TodoAPI.filterTodos(todos, isChecked, searchText);
 		return (
-		    <div id="app">
+		    <div id="app" className="container">
 		    	<TodoSearch onSearch={this.handleSearch} />
 		    	<TodoList todos={filteredTodos} onToggle={this.toggle}/>
 		    	<hr/>

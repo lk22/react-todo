@@ -7,6 +7,13 @@ var TodoList = React.createClass({
 		var {todos} = this.props;
 
 		var renderTodos = () => {
+
+			if(todos.length === 0) {
+				return (
+				    <h5>You have nothing to do right now </h5>
+				);
+			}
+
 			return todos.map((todo) => {
 				return ( <Todo key={todo.id} {...todo} onToggle={this.props.onToggle} /> );
 			});

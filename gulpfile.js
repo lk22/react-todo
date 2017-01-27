@@ -1,15 +1,9 @@
 var gulp = require('gulp');
 var sass = require('gulp-sass');
+var watch = require('gulp-watch');
+var elixir = require('laravel-elixir');
 
-gulp.task('default', ['sass']);
-
-gulp.task('sass', function() {
-	return gulp.src('./app/resources/assets/sass/app.scss')
-    .pipe(sass())
-    .pipe(gulp.dest('./public/css'));
-});
-
-gulp.task('watch', function() {
-	gulp.watch('./resources/assets/sass/**/*.scss', ['sass']);
+elixir((mix) => {
+	mix.sass('./app/resources/assets/sass/app.scss');
 });
 
