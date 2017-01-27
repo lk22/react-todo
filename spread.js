@@ -2,6 +2,8 @@
  * ES6 tutorial Spread operator
  */
 
+var moment = require('moment');
+
 var person = ['Leo', 24];
 var personTwo = ['Steven', 18];
 
@@ -25,3 +27,5 @@ var final = [...names];
 final.forEach((name) => {
 	console.log('hi ' + name);
 });
+
+console.log(moment)
