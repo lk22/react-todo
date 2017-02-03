@@ -29,13 +29,19 @@ module.exports = {
 			AddTodo: 'app/resources/assets/js/components/AddTodo.jsx',
 			TodoSearch: 'app/resources/assets/js/components/TodoSearch.jsx',
 
+			Actions: 'app/resources/assets/js/actions/actions.jsx',
+
 			// styles
 			//applicationStyles: 'app/resources/assets/css/styles.css'
 
 			// API
 			TodoAPI: 'app/api/TodoAPI.jsx'
 		},
-		modeuleDirectories: ['node_modules', './app/resource/assets/js/components'],
+		modeulesDirectories: [
+			'node_modules',
+			'./app/resource/assets/js/components',
+			'./app/api'
+		],
 		extensions: ['', '.js', '.jsx']
 	},
 	module: {
