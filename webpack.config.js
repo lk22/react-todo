@@ -30,6 +30,7 @@ module.exports = {
 			TodoSearch: 'app/resources/assets/js/components/TodoSearch.jsx',
 
 			Actions: 'app/resources/assets/js/actions/actions.jsx',
+			Reducers: 'app/resources/assets/js/reducers/reducers.jsx',
 
 			// styles
 			//applicationStyles: 'app/resources/assets/css/styles.css'
