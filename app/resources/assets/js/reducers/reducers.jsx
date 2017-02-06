@@ -1,3 +1,7 @@
+// dependencies
+var moment = require('moment');
+var uuid = require('node-uuid');
+
 // search text reducer
 export var searchTextReducer = (state = '', action) => {
   	switch (action.type) {
@@ -19,3 +23,36 @@ export var showCompletedReducer = (state = false, action) => {
   	}
 };
 
+// todos reducer
+export var todosReducer = (state = [], action) => {
+	switch (action.type) {
+		case 'ADD_TODO':
+			return [
+				...state,
+				{
+					id: uuid(),
+					text: action.text,
+					completed:false,
+					created_at: moment.unix(),
+					completed_at: undefined
+				}
+			];
+			break;
+
+		case 'TOGGLE_TODO':
+			return state.map((todo) => {
+				if(todo.id === action.id) {
+					var nextCompleted = !todo.completed;
+
+					return {
+						...todo,
+						completed: nextCompleted,
+						completed_at: nextCompleted ? moment().unix() : undefined
+					}
+				}
+			});
+		default:
+			return state;
+			break;
+	}
+};
