@@ -2,6 +2,7 @@
 var React = require('react');
 var ReactDOM = require('react-dom');
 var {Route, Router, IndexRoute, HashHistory} = require('react-router');
+var {Provider} = require('react-redux');
 
 // redux required dependencies
 var store = require('store').configStore();
@@ -25,10 +26,8 @@ store.dispatch(actions.showToggleCompletedTodos());
 
 // render application with react Router
 ReactDOM.render(
-  	<Router history={HashHistory}>
-   		<Route path="/" component={TodoApp}>
-
-  		</Route>
-  	</Router>,
+  	<Provider store={store}>
+		<TodoApp/>
+  	</Provider>,
   	document.getElementById('app')
 );

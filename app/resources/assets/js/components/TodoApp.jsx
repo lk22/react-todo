@@ -37,18 +37,6 @@ var TodoApp = React.createClass({
 		});
 	},
 
-	toggle: function (id) {
-		var updatedTodos = this.state.todos.map( (todo) => {
-			if(todo.id === id){
-				todo.completed = !todo.completed; // ! sets it to opposite value
-				todo.completed_at = todo.completed ? moment.unix : undefined;
-			}
-			return todo;
-		});
-
-		this.setState({todos: updatedTodos});
-	},
-
 	handleSearch: function(check, search) {
 		this.setState({
 			isChecked: check,
@@ -62,7 +50,7 @@ var TodoApp = React.createClass({
 		return (
 		    <div id="app" className="container">
 		    	<TodoSearch onSearch={this.handleSearch} />
-		    	<TodoList todos={filteredTodos} onToggle={this.toggle}/>
+		    	<TodoList/>
 		    	<hr/>
 		    	<AddTodo addTodo={this.addTodo} />
 		    </div>
