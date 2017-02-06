@@ -31,6 +31,7 @@ module.exports = {
 
 			Actions: 'app/resources/assets/js/actions/actions.jsx',
 			Reducers: 'app/resources/assets/js/reducers/reducers.jsx',
+			store: 'app/resources/assets/js/store/storeConfig.jsx',
 
 			// styles
 			//applicationStyles: 'app/resources/assets/css/styles.css'
