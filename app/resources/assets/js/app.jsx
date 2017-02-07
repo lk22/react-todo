@@ -5,7 +5,8 @@ var {Route, Router, IndexRoute, HashHistory} = require('react-router');
 var {Provider} = require('react-redux');
 
 // redux required dependencies
-var store = require('store').configStore();
+var store = require('store').configure();
+// console.log(store);
 var actions = require('Actions');
 
 // foundation CSS

@@ -5,8 +5,8 @@ var moment = require('moment');
 // Todo API
 var TodoAPI = require('../../../../api/TodoAPI.jsx');
 
-var TodoList = require('TodoList');
-var AddTodo = require('AddTodo');
+import TodoList from 'TodoList';
+import AddTodo from 'AddTodo';
 var TodoSearch = require('TodoSearch');
 
 var TodoApp = React.createClass({

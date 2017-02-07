@@ -4,7 +4,7 @@ var {connect} = require('react-redux');
 
 var actions = require('Actions');
 
-var Todo = React.createClass({
+export var Todo = React.createClass({
 	render: function() {
 		var {id, text, completed, created_at, completed_at, dispatch} = this.props;
 		var todoClassName = completed ? 'todo completed' : 'todo';
@@ -30,4 +30,4 @@ var Todo = React.createClass({
 	}
 });
 
-module.exports = connect()(Todo);
+export default connect()(Todo);
