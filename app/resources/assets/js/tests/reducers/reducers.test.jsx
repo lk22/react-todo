@@ -47,6 +47,27 @@ describe('Reducers', () =>
 			expect(response[0].text).toEqual(action.text);
 		});
 
+		it('should generate existing todos', () =>
+		{
+			var todos = [{
+				id: '220',
+				text: 'get new dog',
+				completed: false,
+				completed_at: undefined,
+				created_at: 33000
+			}];
+
+			var action = {
+				type: 'ADD_TODOS',
+				todos: todos
+			};
+
+			var response = reducers.todosReducer(df([]), df(action));
+
+			expect(response.length).toEqual(1);
+			expect(response[0]).toEqual(todos[0]);
+		})
+
 		it('should toggle todo', () =>
 		{
 

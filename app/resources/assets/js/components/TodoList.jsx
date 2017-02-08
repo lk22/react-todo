@@ -7,6 +7,7 @@ var TodoAPI = require('TodoAPI');
 
 export var TodoList = React.createClass({
 	render: function () {
+		console.log('Props', this.props);
 		var {todos, isChecked, searchText} = this.props;
 
 		var renderTodos = () => {
@@ -31,5 +32,8 @@ export var TodoList = React.createClass({
 
 // export module and connect component todo list
 export default connect((state) => {
-	return state;
+	return {
+		...state,
+		hello: 'Hello from connect'
+	};
 })(TodoList);

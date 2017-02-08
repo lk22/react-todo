@@ -37,7 +37,14 @@ export var todosReducer = (state = [], action) => {
 					completed_at: undefined
 				}
 			];
-			break;
+		break;
+
+		case 'ADD_TODOS':
+			return [
+				...state, // the state
+				...action.todos // the todos
+			];
+		break;
 
 		case 'TOGGLE_TODO':
 			return state.map((todo) => {

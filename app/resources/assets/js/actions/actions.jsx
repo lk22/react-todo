@@ -25,6 +25,14 @@ export var addTodo = (text) => {
 	};
 };
 
+// add multiple todos action generator
+export var addTodos = (todos) => {
+	return {
+		type: 'ADD_TODOS',
+		todos: todos
+	};
+};
+
 // toggle todos action generator
 export var toggleTodo = (id) => {
 	return {

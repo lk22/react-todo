@@ -26,6 +26,26 @@ describe('Actions', () =>
 		expect(response).toEqual(action);
 	});
 
+	it('should generate add todos action generator', () =>
+	{
+		var todos = [{
+			id: '220',
+			text: 'get new dog',
+			completed: false,
+			completed_at: undefined,
+			created_at: 33000
+		}];
+
+		var action = {
+			type: 'ADD_TODOS',
+			todos: todos
+		};
+
+		var response = actions.addTodos(todos);
+
+		expect(response).toEqual(action);
+	});
+
 	it('should generate toggle completed todos action', () =>
 	{
 		var action,

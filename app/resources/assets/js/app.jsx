@@ -4,6 +4,9 @@ var ReactDOM = require('react-dom');
 var {Route, Router, IndexRoute, HashHistory} = require('react-router');
 var {Provider} = require('react-redux');
 
+// TodoAPI
+var TodoAPI = require('TodoAPI');
+
 // redux required dependencies
 var store = require('store').configure();
 // console.log(store);
@@ -18,9 +21,15 @@ var TodoApp = require('TodoApp');
 
 // subscribe to new changes on state
 store.subscribe(() => {
-	console.log('New state: ', store.getState());
+	var state = store.getState();
+
+	console.log('New state: ', state);
+
+	TodoAPI.setTodos(state.todos);
 });
 
+var initialTodos = TodoAPI.getTodos();
+store.dispatch(actions.addTodos(initialTodos));
 
 // render application with react Router
 ReactDOM.render(
