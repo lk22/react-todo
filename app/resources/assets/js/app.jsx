@@ -21,9 +21,6 @@ store.subscribe(() => {
 	console.log('New state: ', store.getState());
 });
 
-store.dispatch(actions.addTodo('clean the yard i dont have lol :)'));
-store.dispatch(actions.setSearchText('clean'));
-store.dispatch(actions.showToggleCompletedTodos());
 
 // render application with react Router
 ReactDOM.render(
